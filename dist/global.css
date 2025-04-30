@@ -1,0 +1,158 @@
+html {
+    /* position: relative;  */
+    overflow-x:hidden;
+    overflow-y:hidden; 
+    /* width: 100%; */
+   height: 100%; 
+   background:black;/*:#333333;*/
+   color:silver;
+   stroke: silver;
+   
+  }
+:root{
+--textsize : 1em;
+--depthcolor0 : hsl(20,60%,50%);
+--depthcolor1 : hsl(40,60%,50%);
+--depthcolor2 : hsl(80,60%,50%);
+--depthcolor3  : hsl(110,60%,50%); /*less sensitive*/
+--depthcolor4  : hsl(150,50%,50%);
+--depthcolor5 : hsl(180,50%,60%);
+--depthcolor6  : hsl(200,60%,50%);
+--depthcolor7  : hsl(220,60%,50%);
+--depthcolor8  : hsl(240,60%,50%); 
+--depthcolor9  : hsl(260,60%,50%); 
+--depthcolor10  : hsl(280,60%,50%); 
+--depthcolor11  : hsl(300,60%,50%); 
+--depthcolor12  : hsl(320,60%,50%); 
+--depthcolor13  : hsl(340,60%,50%); 
+--depthcolor14  : hsl(360,60%,50%); 
+--panel-background:black;
+--toolbar: #3F3F3F;
+--backlinkcolor:rgb(163, 119, 10);
+--quotetitlecolor:rgb(147, 107, 8);
+--hit : rgb(255, 173, 42);
+--pagecaption : rgb(255,123,30);
+}
+
+body {
+  font-size: 100%; 
+  margin: 0px 0px 0px 0px;
+}
+
+.bodytext {font-size:var(--textsize)}
+
+@font-face {
+    font-family:"kaiti";
+    src: local("kaiu.ttf"), url("kaiu.ttf") 
+} 
+
+.userselectnone{user-select:none}
+
+.tabs {--webkit-user-select: none; background:var(--panel-background);overflow:hidden}
+.tab-content {
+    position: absolute;
+    /* height:90vh; */
+    width:100%;
+    /* width:30vw; */
+        /* !important; */
+    opacity: 0;
+    pointer-events: none;
+    overflow:hidden;
+}
+.tab-content.visible {/* can't use visibility due to a weird painting bug in Chrome */
+  opacity: 1;
+  pointer-events: all;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.toolbar {
+  background-color: var(--toolbar);
+  user-select: none;
+}
+.basetext {
+  font-family:"Tahoma","San-Serif" , "Microsoft Yahei UI Light";
+  color:silver
+}
+.hide {
+  display:none;
+}
+.chosenbutton{
+  display:inline;
+  /* background:gray; */
+  border-bottom: white 2px dotted;
+  /* color:black; */
+  cursor:pointer;
+}
+
+.hl0{color:var(--hit)}
+.hl1{color:rgb(255, 86, 86)}
+.hl2{color:rgb(238, 105, 255)}
+.hl2{color:rgb(90, 181, 255)}
+
+
+.helptitle {font-size:125%}
+.clickable:hover {cursor:pointer}
+.offtag {color:lightskyblue}
+.offtext《 {color:yellowgreen}
+.runtime《 {font-size:125%}
+
+.offtext【 {color:violet}
+.runtime【  {font-size:110%}
+.offtext〈 {color:lightgreen}
+.offtext〔 {color:lightblue;text-decoration: underline;cursor:pointer}
+.offtext﹛ {font-family: "DFKai-SB", 標楷體, 楷体, kaiti;}
+.offtext﹝ {color:burlywood}
+.offtext﹙ {color:gray}
+.runtime﹝ {font-size:85%}
+.runtime﹙ {display:none}
+
+.offtext_whole {border-top:1px dotted goldenrod;}
+.offtext_control {border:1px dotted goldenrod;color:goldenrod}
+.offtext_attrs{color:goldenrod}
+.offtext_html{color:gray;}
+.offtext_hxpz{color:gold;}
+.transclusion_link{text-decoration-line:underline;text-decoration-style:dashed}
+.transclusion_broken {color:lightcoral;text-decoration: underline;text-decoration-style:dotted}
+.transclusion_opened{text-decoration-line:underline;text-decoration-style:wavy}
+.transclusion_url{border-bottom: 1px cyan solid}
+.transclusion_url:after{content:"🌐"}
+
+.entrystack {text-align:right}
+.nestedline {padding-left:3px;}
+.activeline { border-left:3px silver solid;  padding-left:0px}
+  
+  
+.offtag_tiao:before { content:attr(id) ; color:goldenrod; font-size:80%}
+.offtag_ck{color:burlywood}
+.tocitem:hover {background:var(--toolbar)}
+
+.btnmore { cursor:pointer;
+  font-family: 'Courier New', Courier, monospace;font-size:75%;font-weight: bold;}
+.maketransclusion {cursor:pointer;font-family: 'Courier New', Courier, monospace;font-size:75%;font-weight: bold;color:greenyellow}
+
+.backlink {border-top:dashed var(--backlinkcolor) 2px;
+  border-right:dashed var(--backlinkcolor) 2px;
+  border-left:dashed var(--backlinkcolor) 2px;
+  border-radius: 0.5em; }
+.backlink.highlight {
+  border:none;
+  background:var(--backlinkcolor);
+}
+.quotetitle {border:dashed var(--quotetitlecolor) 2px;
+  border-radius: 0.25em; }
+.quotetitle.highlight {
+  border:none;
+  background:var(--quotetitlecolor);
+}
+.quotetext{font-family: "DFKai-SB", 標楷體, 楷体, kaiti;}
+
+input,select {background:silver}
+.hitcount{color:red;font-weight: bold;font-family: Arial, Helvetica, sans-serif;}
+.dimtext{opacity: 0.5;}
+.ifootnote {text-decoration-line:underline;text-decoration-style:dotted}
+.overflowscroll {overflow-y:auto;height:95vh}
+.pagecaption {color:var(--pagecaption)}
+.hyperlink {color:lightblue}

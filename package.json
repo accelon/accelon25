@@ -1,0 +1,26 @@
+{
+  "name": "accelon25",
+  "version": "1.0.0",
+  "description": "base on webview2 and bun",
+  "main": "testmmap.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"bun dist/init.ts",
+    "build":"bun build --outfile dist/backend.js --target=bun src/backend.ts ",
+    "buildui":"bun build --outdir dist --format=iife --target=browser src/index.ts ",
+    "dev":"bun build --outfile dist/backend.js --no-clear-screen --watch --hot --target=bun src/backend.ts",
+    "devui":"bun build --outdir dist --no-clear-screen --watch --hot --target=browser src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accelon/accelon25.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/accelon/accelon25/issues"
+  },
+  "homepage": "https://github.com/accelon/accelon25#readme"
+}
