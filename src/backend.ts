@@ -1,3 +1,4 @@
+export {getPtkPage} from './ptkpool.ts'
 
 export async function allEvents(e) {
   /*

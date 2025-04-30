@@ -1,15 +1,17 @@
 // run by bun
 import { WebUI } from "./src/webui.ts";
-import {myBackendFunc,allEvents} from "./backend.js"
+import {myBackendFunc,allEvents,getPtkPage} from "./backend.js"
+
 
 // Create new window
 process.chdir(__dirname)
 const myWindow = new WebUI();
 
 // Bind All Events
-myWindow.bind("", allEvents);
+// myWindow.bind("", allEvents);
 // Bind Backend Function
 myWindow.bind("myBackendFunc", myBackendFunc);
+myWindow.bind("getPtkPage", getPtkPage);
 
 // Bind Exit Function
 myWindow.bind("exit", () => {

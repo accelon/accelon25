@@ -1,5 +1,4 @@
 import type { BunPlugin } from "bun";
-console.error('Bun plugin loaded');
 export const sveltePlugin: BunPlugin ={
   name: "svelte loader",
   async setup(build) {
