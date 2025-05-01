@@ -39,7 +39,7 @@ export async function allEvents(e) {
   }
       */
 }
-
+/*
 export async function myBackendFunc(e) {
   const a = e.arg.number(0); // First argument
   const b = e.arg.string(1); // Second argument
@@ -48,3 +48,4 @@ export async function myBackendFunc(e) {
   console.log(`2Second argument: ${b}`);
   console.log(`3xxThird argument: ${c}`);
 }
+*/
